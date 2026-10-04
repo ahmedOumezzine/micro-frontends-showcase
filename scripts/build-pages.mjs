@@ -59,7 +59,7 @@ for (const project of projects) {
 
   const hostHtmlPath = path.join(projectOutput, "index.html");
   const hostHtml = await readFile(hostHtmlPath, "utf8");
-  await writeFile(hostHtmlPath, hostHtml.replaceAll("src=main.js", `src=main.js?v=${version}`));
+  await writeFile(hostHtmlPath, hostHtml.replaceAll("main.js", `main.js?v=${version}`));
 
   links.push(`<article class="project-card"><span class="project-number">${String(links.length + 1).padStart(2, "0")}</span><h2>${project.title}</h2><p>${project.description}</p><small>${project.api}</small><a class="project-link" href="./${project.name}/">Ouvrir le projet <span aria-hidden="true">&#8594;</span></a></article>`);
 }
