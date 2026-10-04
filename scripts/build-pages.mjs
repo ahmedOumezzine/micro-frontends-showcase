@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const output = path.join(root, "site");
+const version = process.env.GITHUB_SHA || "local";
 const projects = [
   { name: "world-dashboard", title: "World Dashboard", description: "Pays, météo, détails et statistiques mondiales.", api: "REST Countries, Open-Meteo", remotes: ["countries-app", "weather-app", "country-details-app", "statistics-app"] },
   { name: "movie-platform", title: "Movie Platform", description: "Films populaires, recherche, détails et favoris.", api: "TMDB avec fallback local", remotes: ["movies-list-app", "movie-details-app", "movie-search-app", "favorites-app"] },
@@ -51,10 +52,14 @@ for (const project of projects) {
     if (file.includes(`${path.sep}host-app${path.sep}`)) continue;
     let content = await readFile(file, "utf8");
     for (const [port, remote] of remoteByPort) {
-      content = content.replaceAll(`http://localhost:${port}/remoteEntry.js`, `./${remote}/remoteEntry.js`);
+      content = content.replaceAll(`http://localhost:${port}/remoteEntry.js`, `./${remote}/remoteEntry.js?v=${version}`);
     }
     await writeFile(file, content);
   }
+
+  const hostHtmlPath = path.join(projectOutput, "index.html");
+  const hostHtml = await readFile(hostHtmlPath, "utf8");
+  await writeFile(hostHtmlPath, hostHtml.replaceAll("src=main.js", `src=main.js?v=${version}`));
 
   links.push(`<article class="project-card"><span class="project-number">${String(links.length + 1).padStart(2, "0")}</span><h2>${project.title}</h2><p>${project.description}</p><small>${project.api}</small><a class="project-link" href="./${project.name}/">Ouvrir le projet <span aria-hidden="true">&#8594;</span></a></article>`);
 }
