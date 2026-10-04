@@ -1,0 +1,1 @@
+export const mockProducts=[{id:1,title:"Studio headphones",description:"Comfortable wireless headphones for focused work and travel.",price:79.99,rating:4.7,stock:18,category:"audio",thumbnail:"https://picsum.photos/seed/headphones/480/360",images:["https://picsum.photos/seed/headphones/900/600"]}];
