@@ -1,0 +1,1 @@
+const F="recipes:favorites",P="recipes:planning";export function load(key){try{return JSON.parse(localStorage.getItem(key)||"{}")}catch{return{}}}export function loadFavorites(){const x=load(F);return Array.isArray(x)?x:[]}export function save(key,value){localStorage.setItem(key,JSON.stringify(value))}export{F,P};

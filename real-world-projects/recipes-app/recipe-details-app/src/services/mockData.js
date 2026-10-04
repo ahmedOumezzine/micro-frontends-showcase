@@ -1,0 +1,1 @@
+export const mockMeals=[{id:"m1",title:"Mediterranean Chickpea Bowl",category:"Vegetarian",area:"Mediterranean",image:"https://picsum.photos/seed/chickpea/640/420",ingredients:[{name:"Chickpeas",measure:"1 can"},{name:"Tomatoes",measure:"2"}],instructions:"Mix the chickpeas, tomatoes and herbs. Serve fresh with lemon.",youtube:"https://www.youtube.com/"}];

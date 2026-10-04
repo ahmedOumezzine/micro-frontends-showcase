@@ -1,0 +1,1 @@
+import{Component}from"react";export default class ErrorBoundary extends Component{state={error:null};static getDerivedStateFromError(error){return{error}}render(){return this.state.error?<div className="alert alert-danger">Module indisponible. <button className="btn btn-sm btn-outline-danger" onClick={()=>this.setState({error:null})}>Reessayer</button></div>:this.props.children}}
