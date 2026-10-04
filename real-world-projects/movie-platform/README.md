@@ -114,6 +114,8 @@ Le fichier `.env` est ignore par Git.
 
 Le projet utilise **props + callbacks**. Le Host conserve `selectedMovieId` et `favorites`. Movies List, Search et Details notifient le Host avec `onMovieSelect` ou `onFavoriteToggle`. Favorites recoit les favoris et demande la suppression avec `onRemoveFavorite`. Les Remotes ne communiquent jamais directement entre elles.
 
+Lorsque `MOVIE_API_KEY`/`TMDB_API_KEY` est vide, le projet utilise automatiquement TVmaze, une API publique gratuite sans clé, puis les mocks locaux en dernier recours. TMDB reste disponible pour obtenir un catalogue cinéma plus riche avec une clé personnelle.
+
 Le Host transmet aussi le film selectionne complet a Movie Details App. Ainsi, si TMDB est absent ou refuse la requete, le Remote Details garde les informations du film choisi au lieu d'afficher un detail generique.
 
 ## Gestion des erreurs

@@ -1,7 +1,8 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from "react";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import LoadingPanel from "./components/LoadingPanel";
-import { getCountries } from "./services/api";
+import { getCountries, normalizeCountry } from "./services/api";
+import { mockCountries } from "./services/mockData";
 
 const CountriesApp = lazy(() => import("countriesApp/Countries"));
 const WeatherApp = lazy(() => import("weatherApp/Weather"));
@@ -18,6 +19,10 @@ export default function App() {
       const canada = result.data.find((country) => country.cca3 === "CAN") || result.data[0];
       setSelectedCountry(canada);
       if (result.warning) setToast(`REST Countries indisponible: ${result.warning}. Donnees locales utilisees.`);
+    }).catch((error) => {
+      const fallback = mockCountries.map(normalizeCountry);
+      setSelectedCountry(fallback.find((country) => country.cca3 === "CAN") || fallback[0]);
+      setToast(`Mode local active: ${error.message || "API pays indisponible"}.`);
     });
   }, []);
 
