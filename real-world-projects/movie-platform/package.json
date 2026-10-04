@@ -1,0 +1,24 @@
+{
+  "name": "movie-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "concurrently \"npm --prefix host-app install\" \"npm --prefix movies-list-app install\" \"npm --prefix movie-details-app install\" \"npm --prefix movie-search-app install\" \"npm --prefix favorites-app install\"",
+    "start:all": "concurrently \"npm --prefix host-app start\" \"npm --prefix movies-list-app start\" \"npm --prefix movie-details-app start\" \"npm --prefix movie-search-app start\" \"npm --prefix favorites-app start\"",
+    "build:all": "npm --prefix host-app run build && npm --prefix movies-list-app run build && npm --prefix movie-details-app run build && npm --prefix movie-search-app run build && npm --prefix favorites-app run build",
+    "start:host": "npm --prefix host-app start",
+    "start:movies": "npm --prefix movies-list-app start",
+    "start:details": "npm --prefix movie-details-app start",
+    "start:search": "npm --prefix movie-search-app start",
+    "start:favorites": "npm --prefix favorites-app start",
+    "build:host": "npm --prefix host-app run build",
+    "build:movies": "npm --prefix movies-list-app run build",
+    "build:details": "npm --prefix movie-details-app run build",
+    "build:search": "npm --prefix movie-search-app run build",
+    "build:favorites": "npm --prefix favorites-app run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "license": "MIT"
+}

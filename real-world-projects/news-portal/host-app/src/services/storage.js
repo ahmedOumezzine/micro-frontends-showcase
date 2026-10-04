@@ -1,0 +1,1 @@
+const KEY="news-portal:bookmarks";export function loadBookmarks(){try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch{return[]}}export function saveBookmarks(items){localStorage.setItem(KEY,JSON.stringify(items))}

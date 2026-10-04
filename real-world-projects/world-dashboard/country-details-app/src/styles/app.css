@@ -1,0 +1,54 @@
+:root {
+  --wd-ink: #162033;
+  --wd-muted: #667085;
+  --wd-surface: #ffffff;
+  --wd-soft: #f4f7fb;
+  --wd-line: #d9e2ef;
+  --wd-accent: #0f766e;
+}
+
+body {
+  background: var(--wd-soft);
+  color: var(--wd-ink);
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.panel {
+  background: var(--wd-surface);
+  border: 1px solid var(--wd-line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.skeleton {
+  min-height: 1rem;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e6edf7 25%, #f7f9fc 37%, #e6edf7 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+.flag-img {
+  width: 76px;
+  height: 50px;
+  object-fit: cover;
+  border: 1px solid var(--wd-line);
+  border-radius: 6px;
+}
+
+.remote-frame {
+  min-height: 240px;
+}
+
+.focus-ring:focus {
+  outline: 3px solid rgba(13, 110, 253, 0.35);
+  outline-offset: 2px;
+}

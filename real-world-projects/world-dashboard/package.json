@@ -1,0 +1,13 @@
+{
+  "name": "world-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "concurrently \"npm --prefix host-app install\" \"npm --prefix countries-app install\" \"npm --prefix weather-app install\" \"npm --prefix country-details-app install\" \"npm --prefix statistics-app install\"",
+    "start:all": "concurrently \"npm --prefix host-app start\" \"npm --prefix countries-app start\" \"npm --prefix weather-app start\" \"npm --prefix country-details-app start\" \"npm --prefix statistics-app start\"",
+    "build:all": "npm --prefix host-app run build && npm --prefix countries-app run build && npm --prefix weather-app run build && npm --prefix country-details-app run build && npm --prefix statistics-app run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

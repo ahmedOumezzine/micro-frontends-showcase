@@ -1,0 +1,11 @@
+{
+  "name": "news-portal",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "concurrently \"npm --prefix host-app install\" \"npm --prefix headlines-app install\" \"npm --prefix news-details-app install\" \"npm --prefix categories-app install\" \"npm --prefix bookmarks-app install\"",
+    "start:all": "concurrently \"npm --prefix host-app start\" \"npm --prefix headlines-app start\" \"npm --prefix news-details-app start\" \"npm --prefix categories-app start\" \"npm --prefix bookmarks-app start\"",
+    "build:all": "npm --prefix host-app run build && npm --prefix headlines-app run build && npm --prefix news-details-app run build && npm --prefix categories-app run build && npm --prefix bookmarks-app run build"
+  },
+  "devDependencies": { "concurrently": "^9.0.1" }
+}

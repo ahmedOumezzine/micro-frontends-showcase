@@ -1,0 +1,99 @@
+:root {
+  --mp-ink: #f8fafc;
+  --mp-muted: #cbd5e1;
+  --mp-line: #334155;
+  --mp-soft: #0f172a;
+  --mp-surface: #182235;
+  --mp-accent: #b42318;
+}
+
+body {
+  background: var(--mp-soft);
+  color: var(--mp-ink);
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.panel {
+  background: var(--mp-surface);
+  border: 1px solid var(--mp-line);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.navbar.bg-white,
+.card,
+.list-group-item,
+.modal-content {
+  background-color: var(--mp-surface) !important;
+  color: var(--mp-ink);
+  border-color: var(--mp-line);
+}
+
+.form-control,
+.form-select {
+  background-color: #0b1220;
+  color: var(--mp-ink);
+  border-color: var(--mp-line);
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+.text-secondary,
+.navbar-text,
+.nav-link {
+  color: var(--mp-muted) !important;
+}
+
+.badge.text-bg-light,
+.alert-light {
+  background-color: #25324a !important;
+  color: var(--mp-ink) !important;
+  border-color: var(--mp-line) !important;
+}
+
+.poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #d9e2ef;
+}
+
+.poster-sm {
+  width: 72px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #d9e2ef;
+}
+
+.skeleton {
+  min-height: 1rem;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e6edf7 25%, #f7f9fc 37%, #e6edf7 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+.remote-frame {
+  min-height: 260px;
+}
+
+.focus-ring:focus {
+  outline: 3px solid rgba(180, 35, 24, 0.28);
+  outline-offset: 2px;
+}
+
+.rating-pill {
+  background: #fff3cd;
+  color: #664d03;
+}
