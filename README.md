@@ -122,6 +122,19 @@ Pour valider un projet :
 
 Les avertissements de taille liés à Bootstrap et Bootstrap Icons peuvent apparaître pendant le build. Ils ne bloquent pas la compilation ni l'exécution.
 
+## Publication GitHub Pages
+
+Le workflow `.github/workflows/deploy-pages.yml` construit automatiquement les huit projets à chaque push sur `master`, assemble leurs Hosts et Remotes dans un site statique, puis le publie avec GitHub Pages.
+
+Après activation de GitHub Pages avec la source **GitHub Actions**, les URLs suivent cette forme :
+
+```text
+https://ahmedoumezzine.github.io/micro-frontends-showcase/
+https://ahmedoumezzine.github.io/micro-frontends-showcase/task-manager/
+```
+
+Le script `scripts/build-pages.mjs` adapte les URLs de `remoteEntry.js` pour la production. Il ne faut donc pas remplacer manuellement les URLs `localhost` dans les configurations de développement. Les APIs publiques restent utilisées côté navigateur et leurs fallbacks locaux continuent de fonctionner si une API est indisponible.
+
 ## Pourquoi ce dépôt est utile comme référence Micro-Frontend
 
 Cette collection couvre plusieurs formes d'état partagé : sélection d'un élément, favoris, panier, planning, recherche, filtres et persistance locale. Elle montre aussi l'orchestration d'applications indépendantes, la communication Host/Remote, le lazy loading, la gestion des APIs instables, les fallbacks, la résilience réseau et le build séparé de chaque module.
