@@ -12,16 +12,20 @@ Les exercices et démonstrations progressives se trouvent dans le dossier `labs/
 
 ### Projets réalistes
 
-| Projet | Host | Remotes | API principale |
-|---|---:|---|---|
-| [World Dashboard](./real-world-projects/world-dashboard) | 9100 | Countries, Weather, Details, Statistics | REST Countries, Open-Meteo, World Bank |
-| [Movie Platform](./real-world-projects/movie-platform) | 9200 | Movies List, Details, Favorites, Search | TMDB avec mocks locaux |
-| [News Portal](./real-world-projects/news-portal) | 9300 | Headlines, Details, Categories, Bookmarks | Hacker News Algolia |
-| [Fake Amazon](./real-world-projects/fake-amazon) | 9400 | Products, Details, Cart, Checkout | DummyJSON Products |
-| [Recipes App](./real-world-projects/recipes-app) | 9500 | Recipes List, Details, Favorites, Meal Planner | TheMealDB |
-| [Travel Dashboard](./real-world-projects/travel-dashboard) | 9600 | Destinations, Weather, Currency, Trip Planner | REST Countries, Open-Meteo, Frankfurter |
-| [GitHub Dashboard](./real-world-projects/github-dashboard) | 9700 | Profile, Repositories, Details, Activity | GitHub REST API |
-| [Task Manager](./real-world-projects/task-manager) | 9800 | Tasks, Details, Activity | JSONPlaceholder |
+| Projet | Host | Remotes | API principale | Démo |
+|---|---:|---|---|---|
+| [World Dashboard](./real-world-projects/world-dashboard) | 9100 | Countries, Weather, Details, Statistics | REST Countries, Open-Meteo, World Bank | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/world-dashboard/) |
+| [Movie Platform](./real-world-projects/movie-platform) | 9200 | Movies List, Details, Favorites, Search | TMDB avec mocks locaux | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/movie-platform/) |
+| [News Portal](./real-world-projects/news-portal) | 9300 | Headlines, Details, Categories, Bookmarks | Hacker News Algolia | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/news-portal/) |
+| [Fake Amazon](./real-world-projects/fake-amazon) | 9400 | Products, Details, Cart, Checkout | DummyJSON Products | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/fake-amazon/) |
+| [Recipes App](./real-world-projects/recipes-app) | 9500 | Recipes List, Details, Favorites, Meal Planner | TheMealDB | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/recipes-app/) |
+| [Travel Dashboard](./real-world-projects/travel-dashboard) | 9600 | Destinations, Weather, Currency, Trip Planner | REST Countries, Open-Meteo, Frankfurter | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/travel-dashboard/) |
+| [GitHub Dashboard](./real-world-projects/github-dashboard) | 9700 | Profile, Repositories, Details, Activity | GitHub REST API | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/github-dashboard/) |
+| [Task Manager](./real-world-projects/task-manager) | 9800 | Tasks, Details, Activity | JSONPlaceholder | [Ouvrir](https://ahmedoumezzine.github.io/micro-frontends-showcase/task-manager/) |
+
+### Démos en ligne
+
+La [page principale GitHub Pages](https://ahmedoumezzine.github.io/micro-frontends-showcase/) regroupe les liens vers toutes les démonstrations.
 
 ## Architecture commune
 
