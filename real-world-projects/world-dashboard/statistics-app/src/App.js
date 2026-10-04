@@ -51,9 +51,9 @@ export default function StatisticsApp({ selectedCountry }) {
             <strong>{country.displayName}</strong>
             <button className="btn btn-sm btn-outline-secondary" onClick={() => setCompareCodes((codes) => codes.filter((code) => code !== country.cca3))} aria-label={`Retirer ${country.displayName}`}><i className="bi bi-x-lg"></i></button>
           </div>
-          <div className="small text-secondary">Population: {country.population.toLocaleString("fr-FR")}</div>
+          <div className="small text-secondary">Population: {country.population?.toLocaleString("fr-FR") || "Indisponible"}</div>
           <div className="progress mb-2" role="progressbar" aria-label={`Population ${country.displayName}`}><div className="progress-bar bg-success" style={{ width: `${(country.population / maxPopulation) * 100}%` }}></div></div>
-          <div className="small text-secondary">Superficie: {country.area.toLocaleString("fr-FR")} km2</div>
+          <div className="small text-secondary">Superficie: {country.area?.toLocaleString("fr-FR") || "Indisponible"} km2</div>
           <div className="progress" role="progressbar" aria-label={`Superficie ${country.displayName}`}><div className="progress-bar bg-info" style={{ width: `${(country.area / maxArea) * 100}%` }}></div></div>
         </div>
       ))}

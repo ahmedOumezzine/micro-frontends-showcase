@@ -91,7 +91,7 @@ export default function CountriesApp({ selectedCountry, onCountrySelect = () => 
                     </div>
                   </div>
                   <p className="mb-1"><i className="bi bi-building me-1"></i>{country.capitalName}</p>
-                  <p className="mb-0 text-secondary"><i className="bi bi-people me-1"></i>{country.population.toLocaleString("fr-FR")}</p>
+                  <p className="mb-0 text-secondary"><i className="bi bi-people me-1"></i>{country.population?.toLocaleString("fr-FR") || "Population indisponible"}</p>
                 </div>
               </button>
             </div>

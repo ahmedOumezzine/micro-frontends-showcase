@@ -26,7 +26,7 @@ export default function App() {
     });
   }, []);
 
-  const summary = useMemo(() => selectedCountry ? `${selectedCountry.displayName} - ${selectedCountry.capitalName} - ${selectedCountry.population.toLocaleString("fr-FR")} habitants` : "Aucun pays selectionne", [selectedCountry]);
+  const summary = useMemo(() => selectedCountry ? `${selectedCountry.displayName} - ${selectedCountry.capitalName} - ${selectedCountry.population?.toLocaleString("fr-FR") || "Population indisponible"} habitants` : "Aucun pays selectionne", [selectedCountry]);
 
   function handleCountrySelect(country) {
     setSelectedCountry(country);
